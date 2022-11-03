@@ -19,6 +19,7 @@ class Notice:  # 지하철 지연 안내
         self.__date()
         self.get_all()
         self.check_info()
+        self.subway_line()
 
     def show_save_data(self):
         return self.__save_data
@@ -87,10 +88,18 @@ class Notice:  # 지하철 지연 안내
         self.__save_data['info'] = info
         return info
 
+    def subway_line(self):
+        all = list(self.__save_data['text'])
+        line_num = []
+        for i in range(len(all)):
+            if all[i] == '호' and all[i + 1] == '선':
+                line_num.append(int(all[i - 1]))
+        self.__save_data['line'] = sorted(list(set(line_num)))
+        return sorted(list(set(line_num)))
+
 
 if __name__ == "__main__":
     url = "http://www.seoulmetro.co.kr/kr/board.do?menuIdx=546&bbsIdx=2214687"
     notice1 = Notice(url)
     info = notice1.show_save_data()
-    print(info['info'])
-
+    print(f'INFO: {info["info"]}\nDate & Start time: {info["date"]} {info["time"]}\nLine number: {info["line"]}')
