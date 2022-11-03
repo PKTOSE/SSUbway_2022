@@ -92,5 +92,5 @@ if __name__ == "__main__":
     url = "http://www.seoulmetro.co.kr/kr/board.do?menuIdx=546&bbsIdx=2214687"
     notice1 = Notice(url)
     info = notice1.show_save_data()
-    print(info)
+    print(info['info'])
 
