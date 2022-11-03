@@ -84,7 +84,7 @@ class MetroAPI :
             try:
                 REQUESTED_JSON = self.requestURL(URL)
                 self.parseRequest(REQUESTED_JSON)
-                self.seatModel.update()
+                #self.seatModel.update()
                 return True
 
             except:

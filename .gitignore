@@ -1,4 +1,6 @@
 *.json
+!firebaseAuth.json
+!metroAuth.json
 
 # Created by https://www.toptal.com/developers/gitignore/api/windows,macos,python,androidstudio,java
 # Edit at https://www.toptal.com/developers/gitignore?templates=windows,macos,python,androidstudio,java
