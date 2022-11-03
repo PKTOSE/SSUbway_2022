@@ -49,4 +49,4 @@ for i in URLS:
 if __name__ == "__main__":
     for i in delays:
         data = i.show_save_data()
-        print(f'{data}\n')
+        print(f'Date: {data["date"]}\nInfo: {data["info"]}')
