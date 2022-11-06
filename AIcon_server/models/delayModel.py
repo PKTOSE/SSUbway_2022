@@ -11,9 +11,9 @@ class delayModel :
         self.db = self.firebase.database()
 
     def remove(self) :
-        self.db.child("DelayInfo").child("오래됨").remove()
+        self.db.child("DelayInfo").remove()
 
-    def updateDelayInfo(self):
+    def updateDelayInfo(self,delayData):
         """
         지연 정보 업데이트
         """
