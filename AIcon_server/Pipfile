@@ -5,6 +5,7 @@ name = "pypi"
 
 [packages]
 pyrebase4 = "*"
+bs4 = "*"
 
 [dev-packages]
 

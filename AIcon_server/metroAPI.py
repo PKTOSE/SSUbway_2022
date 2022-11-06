@@ -59,11 +59,11 @@ class MetroAPI :
             self.parse(status)
         self.subModel.updateLocation(self.location)
 
-    # def train_ok(self, now):
-    #     if now > 23 or now < 5:
-    #         return True
-    #     else:
-    #         return False
+    def train_ok(self, now):
+        if now > 1 and now < 5:
+            return True
+        else:
+            return False
 
 
     def run(self, keyIndex):
@@ -75,8 +75,8 @@ class MetroAPI :
         self.initialize()
         self.subModel.remove()
         now = (datetime.datetime.now().hour)
-        # if self.train_ok(now):
-        #     return False
+        if self.train_ok(now):
+            return False
 
         for line in self.lines:
             URL = self.makeURL(line, keyIndex)

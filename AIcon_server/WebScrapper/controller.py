@@ -2,6 +2,7 @@ from scrapper import Notice
 import datetime
 import requests
 from bs4 import BeautifulSoup as bs
+import json
 
 basicUrl = 'http://www.seoulmetro.co.kr/kr/board.do?menuIdx=546'  # 공지사항 게시판 링크
 alphaUrl = '&bbsIdx='  # 공지사항 개시글 링크
@@ -21,7 +22,7 @@ a_href_title = soup.find_all('a')
 
 delay_list = list()
 for cnt, title in enumerate(a_href_title, 1):
-    print(f'{cnt}. {title.string}')
+    #print(f'{cnt}. {title.string}')
     if "지연" in title.string:
         delay_list.append(cnt - 1)
 
@@ -47,6 +48,10 @@ for i in URLS:
     delays.append(board)
 
 if __name__ == "__main__":
+    datas = []
     for i in delays:
         data = i.show_save_data()
-        print(f'Date: {data["date"]}\nInfo: {data["info"]}')
+        print(f'Date: {data["date"]}\nInfo: {data["info"]}\nLine number: {data["line"]}\n')
+        datas.append(data)
+    with open('./SSUbway_2022/AIcon_server/delayData.json' ,'w' , encoding="UTF8") as f:
+            json.dump(datas,f,ensure_ascii=False,indent=4)
