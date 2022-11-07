@@ -4,7 +4,7 @@ import json
 class subwayModel :
     """ 지하철의 위치와 현재있는 지하철을 저장하는 모델입니다. """
     def __init__(self) :
-        with open("SSUbway_2022/AIcon_server/auth/firebaseAuth.json") as f:
+        with open("./AIcon_server/auth/firebaseAuth.json") as f:
             config = json.load(f)
 
         self.firebase = pyrebase.initialize_app(config)

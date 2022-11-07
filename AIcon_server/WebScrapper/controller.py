@@ -53,5 +53,5 @@ if __name__ == "__main__":
         data = i.show_save_data()
         print(f'Date: {data["date"]}\nInfo: {data["info"]}\nLine number: {data["line"]}\n')
         datas.append(data)
-    with open('./SSUbway_2022/AIcon_server/delayData.json' ,'w' , encoding="UTF8") as f:
+    with open('./AIcon_server/delayData.json' ,'w' , encoding="UTF8") as f:
             json.dump(datas,f,ensure_ascii=False,indent=4)

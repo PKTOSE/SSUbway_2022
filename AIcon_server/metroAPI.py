@@ -9,7 +9,7 @@ import datetime
 class MetroAPI :
     def __init__(self) :
         self.auth = []
-        with open("SSUbway_2022/AIcon_server/auth/metroAuth.json") as f :
+        with open("./AIcon_server/auth/metroAuth.json") as f :
             self.auth = json.load(f)["authKey1"] #인증키 받기
 
         self.lines = [7,]

@@ -41,7 +41,7 @@ class DelayUpdate :
         self.initialize()
         self.delaymodel.remove()
         
-        with open("SSUbway_2022/AIcon_server/delayData.json","rt" , encoding= "UTF8") as f :
+        with open("./AIcon_server/delayData.json","rt" , encoding= "UTF8") as f :
             JSON_FILE = json.load(f)
         try :
             self.parseRequest(JSON_FILE)
