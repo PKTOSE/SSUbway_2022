@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SubwayChoices">
+
+    <ImageButton
+        android:id="@+id/btn_line1"
+        style="@android:style/Widget.Holo.Light.ImageButton"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="49dp"
+        android:backgroundTint="#F8F7F7"
+        android:scaleType="fitXY"
+        android:src="@drawable/line_1"
+        app:layout_constraintBottom_toTopOf="@+id/btn_line4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.03"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/btn_line2"
+        style="@android:style/Widget.Holo.ImageButton"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="49dp"
+        android:backgroundTint="#F8F7F7"
+        android:scaleType="fitXY"
+        android:src="@drawable/line_2"
+        app:layout_constraintBottom_toTopOf="@+id/btn_line5"
+        app:layout_constraintEnd_toStartOf="@+id/btn_line3"
+        app:layout_constraintStart_toEndOf="@+id/btn_line1"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/btn_line3"
+        style="@android:style/Widget.Holo.ImageButton"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="49dp"
+        android:backgroundTint="#F8F7F7"
+        android:scaleType="fitXY"
+        android:src="@drawable/line_3"
+        app:layout_constraintBottom_toTopOf="@+id/btn_line6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.972"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/btn_line4"
+        style="@android:style/Widget.Holo.Light.ImageButton"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:backgroundTint="#F8F7F7"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.03"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/line_4"
+        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/btn_line5"
+        style="@android:style/Widget.Holo.Light.ImageButton"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:backgroundTint="#F8F7F7"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_line6"
+        app:layout_constraintStart_toEndOf="@+id/btn_line4"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/line_5"
+        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/btn_line6"
+        style="@android:style/Widget.Holo.ImageButton"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:backgroundTint="#F8F7F7"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.972"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/line_6"
+        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/btn_line7"
+        style="@android:style/Widget.Holo.Light.ImageButton"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginBottom="49dp"
+        android:backgroundTint="#F8F7F7"
+        android:scaleType="fitXY"
+        android:src="@drawable/line_7"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.03"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_line4"
+        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/btn_line8"
+        style="@android:style/Widget.Holo.Light.ImageButton"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginBottom="49dp"
+        android:backgroundTint="#F8F7F7"
+        android:scaleType="fitXY"
+        android:src="@drawable/line_8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_line9"
+        app:layout_constraintStart_toEndOf="@+id/btn_line7"
+        app:layout_constraintTop_toBottomOf="@+id/btn_line5"
+        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/btn_line9"
+        style="@android:style/Widget.Holo.Light.ImageButton"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginBottom="49dp"
+        android:backgroundTint="#F8F7F7"
+        android:scaleType="fitXY"
+        android:src="@drawable/line_9"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.97"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_line5"
+        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
