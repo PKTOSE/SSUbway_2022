@@ -38,4 +38,4 @@ if __name__ == "__main__":
     li = list(ans.data)
     for cnt, i in enumerate(li, 1):
         print(f"{cnt}\n{i}")
-        print('==========')
+        print('======================')
