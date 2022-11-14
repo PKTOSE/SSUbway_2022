@@ -1,7 +1,6 @@
 from models.seatModel import seatModel
 from models.subwayModel import subwayModel
 import json
-import time
 import requests
 from loger import log
 import datetime
