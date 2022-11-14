@@ -5,7 +5,6 @@ import datetime
 
 tzone = datetime.timezone(datetime.timedelta(hours=9))
 now = datetime.datetime.now(tz=tzone)
-# print(now.strftime('%m월 %d일'))
 load_dotenv()
 
 
