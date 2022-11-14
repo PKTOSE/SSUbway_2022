@@ -1,4 +1,3 @@
-import scrapper
 import tweepy
 import os
 from dotenv import load_dotenv
@@ -90,7 +89,7 @@ class TwitterNotice:  # 서울메트로의 트윗에서 데이터 분리
             filtered_date = f'{month} {filtered_date}'
             self.__save_data['date'] = filtered_date
         else:
-            date = 'None'  # TODO 트윗의 작성일을 가져와서 날짜로 넣어주기 구현
+            date = 'None'
             self.__save_data['date'] = date
 
     def __set_time(self, twts: str):  # 텍스트에서 시, 분을 찾아 저장함
