@@ -8,7 +8,7 @@ class DelayUpdate :
 
     def initialize(self) :
         self.delayInfo = {
-           
+            
         }
 
     # def requstDelayInfo(self,data) :
@@ -21,9 +21,9 @@ class DelayUpdate :
         info = delayData["info"]
         line = delayData["line"]
         updatedData = {
-            "시간" : time, 
             "정보" : info,
-            "호선" : line
+            "호선" : line,
+            "시간" : time
         }
         self.delayInfo[date] = updatedData
 
