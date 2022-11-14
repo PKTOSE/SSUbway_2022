@@ -2,7 +2,11 @@ import scrapper
 import tweepy
 import os
 from dotenv import load_dotenv
+import datetime
 
+tzone = datetime.timezone(datetime.timedelta(hours=9))
+now = datetime.datetime.now(tz=tzone)
+# print(now.strftime('%m월 %d일'))
 load_dotenv()
 
 
@@ -15,6 +19,7 @@ class TweetScrap:
         self.access_token = os.environ.get("access_token")
         self.access_token_secret = os.environ.get("access_token_secret")
         self.api = self.__get_apis()
+        self.__save_data = dict()
 
     def __get_apis(self):
         api = tweepy.Client(bearer_token=self.bearer_token,
@@ -30,6 +35,15 @@ class TweetScrap:
         tweets = self.api.get_users_tweets(id)
         # print(tweets)
         return tweets
+
+    def __set_data(self):
+        tweets = self.get_tweets()
+        tweets = list(tweets.data)
+
+    def __set_dates(self, twts: str):
+        now = datetime.datetime.now(tz=tzone)
+        if '오늘' in twts:
+            self.__save_data['date'] = now.strftime('%m월 %d일')
 
 
 if __name__ == "__main__":
