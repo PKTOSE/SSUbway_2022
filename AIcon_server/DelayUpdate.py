@@ -21,7 +21,7 @@ class DelayUpdate :
         text = delayData["text"]
         line = delayData["line"]
         updatedData = {
-            "text" : text,
+            "정보" : text,
             "호선" : line,
             "시간" : time,
             "날짜" : date
