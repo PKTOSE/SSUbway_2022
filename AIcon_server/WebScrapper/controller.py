@@ -3,6 +3,7 @@ import datetime
 import requests
 from bs4 import BeautifulSoup as bs
 import json
+import twitter_scrapper
 
 basicUrl = 'http://www.seoulmetro.co.kr/kr/board.do?menuIdx=546'  # 공지사항 게시판 링크
 alphaUrl = '&bbsIdx='  # 공지사항 개시글 링크
@@ -48,10 +49,17 @@ for i in URLS:
     delays.append(board)
 
 if __name__ == "__main__":
-    datas = []
-    for i in delays:
-        data = i.show_save_data()
-        print(f'Date: {data["date"]}\nInfo: {data["info"]}\nLine number: {data["line"]}\n')
-        datas.append(data)
-    with open('./AIcon_server/delayData.json' ,'w' , encoding="UTF8") as f:
-            json.dump(datas,f,ensure_ascii=False,indent=4)
+    # datas = []
+    # for i in delays:
+    #     data = i.show_save_data()
+    #     print(f'Date: {data["date"]}\nInfo: {data["info"]}\nLine number: {data["line"]}\n')
+    #     datas.append(data)
+    # with open('./AIcon_server/delayData.json' ,'w' , encoding="UTF8") as f:
+    #         json.dump(datas,f,ensure_ascii=False,indent=4)
+
+    twitter_datas = []
+    twitter = twitter_scrapper.TweetScrap()
+    for i, tweet in enumerate(twitter):
+        twitter_datas.append(twitter_scrapper.TwitterNotice(tweet))
+    with open('./AIcon_server/delayData.json', 'w', encoding="UTF8") as f:
+        json.dump(twitter_datas, f, ensure_ascii=False, indent=4)

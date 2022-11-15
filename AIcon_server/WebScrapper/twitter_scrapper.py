@@ -157,5 +157,5 @@ if __name__ == "__main__":
     datas = []
     for i, tweet in enumerate(tweets):
         datas.append(TwitterNotice(tweet))
-        print(f'{i + 1}: {datas[i].show_data()["line"]}')
+        print(f'{i + 1}: {datas[i].show_data()}')
     # print(f"{TwitterNotice(tweets[-1]).show_data()}")
