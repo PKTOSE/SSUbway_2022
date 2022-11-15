@@ -1,0 +1,16 @@
+<!-- <!doctype html>
+<head>
+	<title>metro no.1 delay</title>
+	<script src="/static/base.js"></script>
+	<link href="/static/base.css" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap" rel="stylesheet"> 
+</head>
+<body>
+	<h1>metro no<cb>{{ delay_line }}</cb> delay</h1>
+	<p>
+    <cb>{{ delay_info }} </cb>
+	</p>
+  
+
+	<a href="/">Go back</a>
+</body> -->

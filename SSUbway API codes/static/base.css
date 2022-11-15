@@ -1,0 +1,15 @@
+cb { background-color: rgb(63, 63, 63) }
+
+a {
+	color: rgb(255, 153, 153);
+	-webkit-appearance: button;
+	-moz-appearance: button;
+	appearance: button;
+}
+
+body {
+	text-align: center;
+	font-family: 'IBM Plex Sans', sans-serif;
+	background-color: black;
+	color: white;
+}
