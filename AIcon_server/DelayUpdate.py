@@ -22,9 +22,9 @@ class DelayUpdate :
         line = delayData["line"]
         updatedData = {
             "text" : text,
-            "line" : line,
-            "time" : time,
-            "date" : date
+            "호선" : line,
+            "시간" : time,
+            "날짜" : date
         }
         if date == "None" :
             self.delayInfo["기타"] = updatedData
