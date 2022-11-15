@@ -5,7 +5,7 @@ from DelayUpdate import DelayUpdate
 from loger import log
 import random
 from apscheduler.schedulers.background import BackgroundScheduler
-from apscheduler.jobstores.base import JobLookupError
+
 
 
 def MetroUpdate() :

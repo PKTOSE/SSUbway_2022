@@ -1,10 +1,12 @@
 from models.delayModel import delayModel
+import WebScrapper.controller
 import json
 
 class DelayUpdate :
     def __init__(self) :
         self.delaymodel = delayModel()
         self.initialize()
+
 
     def initialize(self) :
         self.delayInfo = {
@@ -21,7 +23,7 @@ class DelayUpdate :
         text = delayData["text"]
         line = delayData["line"]
         updatedData = {
-            "text" : text,
+            "정보" : text,
             "호선" : line,
             "시간" : time,
             "날짜" : date
@@ -44,6 +46,8 @@ class DelayUpdate :
         """
         self.initialize()
         self.delaymodel.remove()
+        WebScrapper.controller.run()
+
         
         with open("./AIcon_server/delayData.json","rt" , encoding= "UTF8") as f :
             JSON_FILE = json.load(f)
