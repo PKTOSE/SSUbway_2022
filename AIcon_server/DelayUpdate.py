@@ -18,14 +18,18 @@ class DelayUpdate :
     def parse(self,delayData) :
         date = delayData["date"]
         time = delayData["time"]
-        info = delayData["info"]
+        text = delayData["text"]
         line = delayData["line"]
         updatedData = {
-            "정보" : info,
-            "호선" : line,
-            "시간" : time
+            "text" : text,
+            "line" : line,
+            "time" : time,
+            "date" : date
         }
-        self.delayInfo[date] = updatedData
+        if date == "None" :
+            self.delayInfo["기타"] = updatedData
+        else :
+            self.delayInfo[date] = updatedData
 
     def parseRequest(self , JSON_FILE) :
         delaySatuses = JSON_FILE
@@ -45,6 +49,7 @@ class DelayUpdate :
             JSON_FILE = json.load(f)
         try :
             self.parseRequest(JSON_FILE)
+            #print("Updated")
             return True
         except :
             print("error")

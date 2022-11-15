@@ -60,6 +60,6 @@ if __name__ == "__main__":
     twitter_datas = []
     twitter = twitter_scrapper.TweetScrap()
     for i, tweet in enumerate(twitter):
-        twitter_datas.append(twitter_scrapper.TwitterNotice(tweet))
+        twitter_datas.append(twitter_scrapper.TwitterNotice(tweet).show_data())
     with open('./AIcon_server/delayData.json', 'w', encoding="UTF8") as f:
         json.dump(twitter_datas, f, ensure_ascii=False, indent=4)
