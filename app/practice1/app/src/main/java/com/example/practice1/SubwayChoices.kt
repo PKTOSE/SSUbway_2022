@@ -51,7 +51,7 @@ class SubwayChoices : AppCompatActivity() {
             startActivity(intent)
         }
         binding.btnLine7.setOnClickListener(){
-            val intent = Intent(this, Line7Activity::class.java)
+            val intent = Intent(this, DelayActivity::class.java)
 
             startActivity(intent)
         }
