@@ -13,7 +13,9 @@
 
 ### 지하철 지연정보 API 링크
 [기본링크] https://ssubway.jungwon0719a.repl.co/
+
 [GET 요청 링크] https://ssubway.jungwon0719a.repl.co/apis/delay?line={line number}
+
 __GET 예제 코드__
 ```python
 import requests
