@@ -32,6 +32,7 @@ vscode 이용시 ctrl + shift + p 를 통해 python Interpreter 설정에서 새
 Twitter API 사용을 위한 tweepy 설치 필요
 ```angular2html
 pip install tweepy
+pip install python-dotenv
 ```
 API에 대한 토큰이 담긴 .env파일이 필요함 (아래 부분에서 사용을 위해)
 ```python
