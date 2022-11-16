@@ -57,7 +57,7 @@ class DelayUpdate :
             return True
         except :
             print("error")
-            False
+            return False
 
 
 
